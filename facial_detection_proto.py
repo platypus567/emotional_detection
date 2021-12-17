@@ -1,8 +1,8 @@
 import sys
 import numpy
 import cv2 as cv
-face_cascade = cv.CascadeClassifier(#location for cascade for face)
-eye_cascade = cv.CascadeClassifier(#fill with eye cascade file location)
+face_cascade = cv.CascadeClassifier("haarcascade_frontalface_default.xml")
+eye_cascade = cv.CascadeClassifier("haarcascade_eye.xml")
 cap = cv.VideoCapture(0)
 while cap.isOpened():
     falg, img = cap.read()
